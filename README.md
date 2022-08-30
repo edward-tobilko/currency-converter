@@ -4,4 +4,4 @@
 
 The responsive app for getting exchange rates. You can change regions and get the current exchange rate.
 
-- api: https://v6.exchangerate-api.com/v6/
+- api: https://v6.exchangerate-api.com
