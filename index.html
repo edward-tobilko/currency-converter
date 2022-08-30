@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <section class="converter">
+      <div class="container">
+        <header class="converter__header">Currency Converter</header>
+        <form class="converter__form">
+          <div class="converter__form-header">
+            <h2 class="converter__form-header__title">Amount</h2>
+            <input class="converter__form-header__input" />
+          </div>
+
+          <div class="converter__form-content">
+            <div class="converter__form-content__list from">
+              <p class="converter__form-content__title">From Currency</p>
+              <div class="converter__form-content__selectBox">
+                <img
+                  src="https://countryflagsapi.com/png/us"
+                  alt="flag"
+                  width="45px"
+                  height="30px"
+                  class="converter__form-content__flag"
+                />
+                <select id="select">
+                  <!-- optionTag -->
+                </select>
+              </div>
+            </div>
+
+            <div class="converter__form-exchange">
+              <i class="ri-arrow-left-right-line"></i>
+            </div>
+
+            <div class="converter__form-content__list to">
+              <p class="converter__form-content__title">To Currency</p>
+              <div class="converter__form-content__selectBox">
+                <img
+                  src="https://countryflagsapi.com/png/ukraine"
+                  alt="flag"
+                  width="45px"
+                  height="30px"
+                  class="converter__form-content__flag"
+                />
+                <select>
+                  <!-- optionTag -->
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="converter__form-footer">
+            <h5 class="converter__form-footer__results">
+              <!-- Get exchange rate text -->
+            </h5>
+            <button type="button" class="converter__form-footer__btn">
+              <span>Get Exchange Rate</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
