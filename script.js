@@ -407,7 +407,7 @@ const countries = {
 };
 
 // Main
-const API_KEY = ""; // your key for API
+const API_KEY = "ea56698f4c3227f852d53cef"; // this should be your API key
 const URL = "https://v6.exchangerate-api.com/v6/";
 
 const dropList = document.querySelectorAll(".converter__form-content select");
