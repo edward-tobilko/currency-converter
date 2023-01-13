@@ -448,7 +448,7 @@ window.addEventListener("load", () => {
   getExchangeRate();
 });
 
-// Change of sides flags and countries code
+// Change of flags and country code
 changeOfSides.addEventListener("click", () => {
   let changeFromCurrency = fromCurrency.value;
   fromCurrency.value = toCurrency.value;
