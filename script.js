@@ -407,7 +407,7 @@ const countries = {
 };
 
 // Main
-const API_KEY = "ea56698f4c3227f852d53cef"; // this should be your API key
+const API_KEY = "ea56698f4c3227f852d53cef"; //? This should be your API key
 const URL = "https://v6.exchangerate-api.com/v6/";
 
 const dropList = document.querySelectorAll(".converter__form-content select");
@@ -420,7 +420,7 @@ const changeOfSides = document.querySelector(
 
 for (let index = 0; index < dropList.length; index++) {
   for (currencyCode in countries) {
-    // Select current option
+    //? Select current option
     let selected;
     if (index === 0) {
       selected = currencyCode === "USD" ? "selected" : "";
@@ -428,12 +428,12 @@ for (let index = 0; index < dropList.length; index++) {
       selected = currencyCode === "UAH" ? "selected" : "";
     }
 
-    // Create new tag for the 'option' element
+    //? Create new tag for the 'option' element
     let optionTag = `<option value="${currencyCode}" ${selected}>${currencyCode}</option>`;
     dropList[index].insertAdjacentHTML("beforeEnd", optionTag);
   }
 
-  // Showing flag of a selected country
+  //? Showing flag of a selected country
   dropList[index].addEventListener("change", (event) => {
     loadFlag(event.target);
   });
@@ -448,7 +448,7 @@ window.addEventListener("load", () => {
   getExchangeRate();
 });
 
-// Change of flags and country code
+//? Change of flags and country code
 changeOfSides.addEventListener("click", () => {
   let changeFromCurrency = fromCurrency.value;
   fromCurrency.value = toCurrency.value;
@@ -459,7 +459,7 @@ changeOfSides.addEventListener("click", () => {
   getExchangeRate();
 });
 
-// Create function for flags of a selected country
+//? Create function for flags of a selected country
 function loadFlag(item) {
   for (key in countries) {
     if (key === item.value) {
@@ -488,13 +488,13 @@ function getExchangeRate() {
   fetch(URL + `${API_KEY}/latest/${fromCurrency.value}`)
     .then((response) => response.json())
     .then((result) => {
-      // Change current rate "from to"
+      //? Change current rate "from to"
       let exchangeRate = result.conversion_rates[toCurrency.value];
 
-      // Total exchange rate "from to"
+      //? Total exchange rate "from to"
       let totalExchangeRate = (amountValue * exchangeRate).toFixed(2);
 
-      // Get exchange rate text
+      //? Get exchange rate text
       exchangeRatetext.innerText = `${amountValue} ${fromCurrency.value} = ${totalExchangeRate} ${toCurrency.value}`;
     })
     .catch(() => "Error");
