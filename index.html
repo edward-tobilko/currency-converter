@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,7 +28,14 @@
         <form class="converter__form">
           <div class="converter__form-header">
             <h2 class="converter__form-header__title">Amount</h2>
-            <input class="converter__form-header__input" />
+            <input
+              class="converter__form-header__input"
+              type="number"
+              placeholder="Enter amount"
+              min="0"
+              step="0.01"
+              required
+            />
           </div>
 
           <div class="converter__form-content">
@@ -36,14 +43,15 @@
               <p class="converter__form-content__title">From Currency</p>
               <div class="converter__form-content__selectBox">
                 <img
-                  src="https://countryflagsapi.com/png/us"
+                  src="https://flagcdn.com/w80/us.png"
                   alt="flag"
                   width="45px"
                   height="30px"
                   class="converter__form-content__flag"
                   crossorigin="anonymous"
                 />
-                <select id="select">
+                <label for="from-currency"></label>
+                <select id="from-currency" name="fromCurrency">
                   <!-- optionTag -->
                 </select>
               </div>
@@ -57,14 +65,15 @@
               <p class="converter__form-content__title">To Currency</p>
               <div class="converter__form-content__selectBox">
                 <img
-                  src="https://countryflagsapi.com/png/ukraine"
+                  src="https://flagcdn.com/w80/ua.png"
                   alt="flag"
                   width="45px"
                   height="30px"
                   class="converter__form-content__flag"
                   crossorigin="anonymous"
                 />
-                <select>
+                <label for="to-currency"></label>
+                <select id="to-currency" name="toCurrency">
                   <!-- optionTag -->
                 </select>
               </div>
